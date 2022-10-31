@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script
+            src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+            integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            // https://learn.jquery.com/events/event-basics/
+
+            $(document).ready(function() {
+                const myImage = $("#myImage");
+                const greenButton = $("#greenButton");
+                const yellowButton = $("#yellowButton");
+                const redButton = $("#redButton");
+                const offButton = $("#offButton");
+
+                greenButton.click(function() {
+                    myImage.attr("src", "./semaforo-verde.png");
+                });
+                yellowButton.click(function() {
+                    myImage.attr("src", "./semaforo-amarelo.png");
+                });
+                redButton.click(function() {
+                    myImage.attr("src", "./semaforo-vermelho.png");
+                });
+                offButton.click(function() {
+                    myImage.attr("src", "./semaforo-desligado.png");
+                });
+            });
+        </script>
+        <style>
+            .button {
+                font-weight: bolder;
+            }
+        </style>
+    </head>
+<body>
+
+    <h1>Semáforo</h1>
+
+    <button id="greenButton" class="button">Verde</button>
+    <button id="yellowButton" class="button">Amarelo</button>
+
+    <img id="myImage" src="./semaforo-desligado.png" style="width:300px">
+
+    <button id="redButton" class="button">Vermelho</button>
+    <button id="offButton" class="button">Desligar</button>
+
+</body>
+</html>
+ 
